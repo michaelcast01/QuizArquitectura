@@ -1,8 +1,6 @@
 package com.example.papeleria.modelos;
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 @Entity
 public class Proveedor {
@@ -16,20 +14,15 @@ public class Proveedor {
     private String correo;
     private String direccion;
 
-    private LocalDate fecha;
-    private LocalTime hora;
-
     public Proveedor() {
     }
 
-    public Proveedor(Integer id_proveedor, String nombre, String telefono, String correo, String direccion, LocalDate fecha, LocalTime hora) {
+    public Proveedor(Integer id_proveedor, String nombre, String telefono, String correo, String direccion) {
         this.id_proveedor = id_proveedor;
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;
         this.direccion = direccion;
-        this.fecha = fecha;
-        this.hora = hora;
     }
 
     public Integer getId_proveedor() {
@@ -70,21 +63,5 @@ public class Proveedor {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
-    }
-
-    public LocalDate getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
-
-    public LocalTime getHora() {
-        return hora;
-    }
-
-    public void setHora(LocalTime hora) {
-        this.hora = hora;
     }
 }
